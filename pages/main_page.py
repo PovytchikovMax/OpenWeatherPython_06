@@ -241,8 +241,12 @@ class MainPage(BasePage):
     def check_company_module_title_visibility(self):
         company_module_title = \
             self.driver.find_element(*self.locators.COMPANY_TITLE)
-        assert company_module_title.is_displayed(), \
-            "The Company module title is not visible"
+        assert company_module_title.is_displayed(), "The Company module title is not visible"
+
+    def check_company_module_text_visibility(self):
+        company_module_text = \
+            self.driver.find_element(*self.locators.COMPANY_TEXT)
+        assert company_module_text.is_displayed(), "The Company module text is not visible"
 
     def check_text_of_company_module_title(self, text):
         element_text = self.driver.find_element(*self.locators.COMPANY_TITLE).text
