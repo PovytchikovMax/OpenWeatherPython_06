@@ -51,7 +51,8 @@ class TestMainPage:
         page.check_technologies_section_is_visible()
 
     @pytest.mark.parametrize('URL', URLs)
-    def test_tc_003_02_06_verify_display_of_terms_and_conditions_section_on_pages(self, driver, open_and_load_main_page, URL):
+    def test_tc_003_02_06_verify_display_of_terms_and_conditions_section_on_pages(self, driver, open_and_load_main_page,
+                                                                                  URL):
         page = MainPage(driver, link=URL)
         page.check_terms_and_conditions_section_is_visible()
 
@@ -61,7 +62,7 @@ class TestMainPage:
         page.check_single_links_section_is_visible()
 
     @pytest.mark.parametrize('URL', URLs)
-    def test_tc_003_02_08_verify_display_of_download_openweather_app_section_on_pages\
+    def test_tc_003_02_08_verify_display_of_download_openweather_app_section_on_pages \
                     (self, driver, open_and_load_main_page, URL):
         page = MainPage(driver, link=URL)
         page.check_download_openweather_app_section_is_visible()
@@ -110,12 +111,14 @@ class TestMainPage:
         page.check_pricing_link_is_clickable()
 
     @pytest.mark.parametrize('URL', URLs)
-    def test_tc_003_05_06_verify_display_of_subscribe_for_free_link_on_pages(self, driver, open_and_load_main_page, URL):
+    def test_tc_003_05_06_verify_display_of_subscribe_for_free_link_on_pages(self, driver, open_and_load_main_page,
+                                                                             URL):
         page = MainPage(driver, link=URL)
         page.check_subscribe_for_free_link_is_visible()
 
     @pytest.mark.parametrize('URL', URLs)
-    def test_tc_003_05_07_verify_clickability_of_subscribe_for_free_link_on_pages(self, driver, open_and_load_main_page, URL):
+    def test_tc_003_05_07_verify_clickability_of_subscribe_for_free_link_on_pages(self, driver, open_and_load_main_page,
+                                                                                  URL):
         page = MainPage(driver, link=URL)
         page.check_subscribe_for_free_link_is_clickable()
 
@@ -136,7 +139,8 @@ class TestMainPage:
         page = MainPage(driver)
         page.check_website_terms_and_conditions_link_visibility()
 
-    def test_tc_003_06_04_verify_clickability_of_website_terms_and_conditions_link(self, driver, open_and_load_main_page):
+    def test_tc_003_06_04_verify_clickability_of_website_terms_and_conditions_link(self, driver,
+                                                                                   open_and_load_main_page):
         page = MainPage(driver)
         page.check_website_terms_and_conditions_link_is_clickable()
 
@@ -144,7 +148,8 @@ class TestMainPage:
         page = MainPage(driver)
         page.check_terms_and_conditions_of_sale_link_visibility()
 
-    def test_tc_003_06_06_verify_clickability_of_terms_and_conditions_of_sale_link(self, driver, open_and_load_main_page):
+    def test_tc_003_06_06_verify_clickability_of_terms_and_conditions_of_sale_link(self, driver,
+                                                                                   open_and_load_main_page):
         page = MainPage(driver)
         page.check_terms_and_conditions_of_sale_link_is_clickable()
 
@@ -167,6 +172,13 @@ class TestMainPage:
     def test_tc_003_07_04_verify_company_module_text_visibility(self, driver, open_and_load_main_page):
         page = MainPage(driver)
         page.check_company_module_text_visibility()
+
+    def test_tc_003_07_05_verify_content_of_company_module_text(self, driver, open_and_load_main_page, wait):
+        page = MainPage(driver)
+        page.check_content_of_company_module_text("OpenWeather is a team of IT experts and data scientists that has "
+                                                  "been practising deep weather data science. For each point on the "
+                                                  "globe, OpenWeather provides historical, current and forecasted "
+                                                  "weather data via light-speed APIs. Headquarters in London, UK.")
 
     @pytest.mark.parametrize('URL', URLs)
     def test_tc_003_08_05_about_us_link_is_visible_on_each_page_specified_in_data(self, driver,

@@ -253,6 +253,11 @@ class MainPage(BasePage):
         assert element_text == text, \
             f"Actual text '{element_text}' of the Company module title does not match expected '{text}'"
 
+    def check_content_of_company_module_text(self, text):
+        element_text = self.driver.find_element(*self.locators.COMPANY_TEXT).text
+        assert element_text == text, \
+            f"Actual content '{element_text}' of the Company module text does not match expected '{text}'"
+
     def check_about_us_link_is_visible(self):
         about_us_link = self.driver.find_element(*self.locators.ABOUT_US_LINK)
         assert about_us_link.is_displayed(), "The About us link is not visible"
