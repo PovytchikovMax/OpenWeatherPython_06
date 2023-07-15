@@ -277,6 +277,11 @@ class MainPage(BasePage):
         assert product_collections_module.is_displayed(), \
             "The footer is not displayed or does not contain the expected text"
 
+    def check_text_of_download_openweather_app_module_title(self, text):
+        element_text = self.driver.find_element(*self.locators.DOWNLOAD_OPENWEATHER_APP_TITLE).text
+        assert element_text == text, \
+            f"Actual text '{element_text}' of the Download OpenWeather app module title does not match expected '{text}'"
+
     def get_header_search_field_attribute(self, attribute):
         '''To retrieve the value of a specific attribute from Header Search field'''
         search_placeholder = self.driver.find_element(*self.locators.HEADER_SEARCH_FIELD)
