@@ -2,6 +2,7 @@ from pages.base_page import BasePage
 from selenium.webdriver import ActionChains
 from selenium.webdriver.support import expected_conditions as EC
 from locators.locators import MainPageLocators, BasePageLocators
+from test_data.urls import MainPageUrls
 from test_data.all_links import Links
 from datetime import datetime, date
 from zoneinfo import ZoneInfo
@@ -281,6 +282,10 @@ class MainPage(BasePage):
         element_text = self.driver.find_element(*self.locators.DOWNLOAD_OPENWEATHER_APP_TITLE).text
         assert element_text == text, \
             f"Actual text '{element_text}' of the Download OpenWeather app module title does not match expected '{text}'"
+
+    def check_image_is_present_in_download_on_the_app_store_link(self):
+        image = self.find_element(self.locators.DOWNLOAD_ON_THE_APP_STORE_IMAGE)
+        assert image is not None, "The image is not present in the Download on the App Store brand-link"
 
     def get_header_search_field_attribute(self, attribute):
         '''To retrieve the value of a specific attribute from Header Search field'''

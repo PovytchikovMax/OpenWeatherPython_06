@@ -34,6 +34,8 @@ class MainPageLocators:
     CONNECT_YOUR_WEATHER_STATION_LINK = (By.CSS_SELECTOR, "li a[href*='station']")
     COOKIES = (By.XPATH, "//button[contains(text(), 'Allow all')]")
     CURRENT_AND_FORECAST_APIS_LINK = (By.CSS_SELECTOR, "#footer-website a[href='/api#current']")
+    DOWNLOAD_ON_THE_APP_STORE_IMAGE = (By.CSS_SELECTOR,
+                                      "#footer-website > div > :nth-child(3) > :nth-child(2) > :nth-child(1) img")
     DOWNLOAD_OPENWEATHER_APP_SECTION = (By.CSS_SELECTOR, "#footer-website > div > div:nth-child(3)")
     DOWNLOAD_OPENWEATHER_APP_TITLE = (By.CSS_SELECTOR, "#footer-website > div > div:nth-child(3) p")
     FAQ_LINK = (By.CSS_SELECTOR, ":nth-child(1) > :nth-child(2) > .section-content > ul > :nth-child(4) > a")
