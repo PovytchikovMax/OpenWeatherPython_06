@@ -35,7 +35,7 @@ class MainPageLocators:
     COOKIES = (By.XPATH, "//button[contains(text(), 'Allow all')]")
     CURRENT_AND_FORECAST_APIS_LINK = (By.CSS_SELECTOR, "#footer-website a[href='/api#current']")
     DOWNLOAD_ON_THE_APP_STORE_IMAGE = (By.CSS_SELECTOR,
-                                      "#footer-website > div > :nth-child(3) > :nth-child(2) > :nth-child(1) img")
+                                       "#footer-website > div > :nth-child(3) > :nth-child(2) > :nth-child(1) img")
     DOWNLOAD_OPENWEATHER_APP_SECTION = (By.CSS_SELECTOR, "#footer-website > div > div:nth-child(3)")
     DOWNLOAD_OPENWEATHER_APP_TITLE = (By.CSS_SELECTOR, "#footer-website > div > div:nth-child(3) p")
     FAQ_LINK = (By.CSS_SELECTOR, ":nth-child(1) > :nth-child(2) > .section-content > ul > :nth-child(4) > a")
@@ -163,6 +163,7 @@ class PricingPageLocators:
     DISPLAYED_TITLE = (By.CSS_SELECTOR, 'h1.breadcrumb-title')
     ONE_CALL_SUBSCRIBE_BUTTON = (By.XPATH, '//center/a[@class="ow-btn round btn-orange"]')
 
+
 class ApiPageLocators:
     API_PAGE = 'https://openweathermap.org/api'
     button_weather_alerts_api_doc = (By.XPATH, "//*[@class='btn_block black round'][@href='/api/push-weather-alerts']")
@@ -174,10 +175,10 @@ class ApiPageLocators:
     ONE_CALL_API_LINK = 'https://openweathermap.org/api/one-call-3'
     ONE_CALL_API_3 = (By.CSS_SELECTOR, ".col-sm-6>h2>a[href ='/api/one-call-3']")
     history_api_full_archive_calls_and_response = [(By.CSS_SELECTOR, '#addlocation > div.api > code'),
-                                                    (By.CSS_SELECTOR, '#addlocation > div.response.open > div.api'),
-                                                    (By.CSS_SELECTOR, '#getlist > div > code'),
-                                                    (By.CSS_SELECTOR, '#data > div.api > code'),
-                                                    (By.CSS_SELECTOR, '#data > div.response.open > div.api > code')]
+                                                   (By.CSS_SELECTOR, '#addlocation > div.response.open > div.api'),
+                                                   (By.CSS_SELECTOR, '#getlist > div > code'),
+                                                   (By.CSS_SELECTOR, '#data > div.api > code'),
+                                                   (By.CSS_SELECTOR, '#data > div.response.open > div.api > code')]
     history_api_full_archive_headers_h2 = (By.XPATH, '//h2')
     history_api_full_archive_headers_h3 = (By.XPATH, '//h3')
     API_LOGO = (By.CSS_SELECTOR, "#first-level-nav a")
@@ -316,7 +317,7 @@ class WeatherConditionsLocators:
     WEATHER_ICONS = (By.XPATH, '//a[.="Weather icons"]')
     ICONS_FOR_NIGHT_TIME = (By.XPATH, '//td[contains(text(), "n.png")]')
     ELEMENTS_LOCATOR_CODES = lambda table: (
-    By.XPATH, f"//table[@class='table table-bordered'][(position() = {table})]/tbody/tr/td[1]")
+        By.XPATH, f"//table[@class='table table-bordered'][(position() = {table})]/tbody/tr/td[1]")
     ELEMENTS_LOCATOR_DESC = lambda table: (
         By.XPATH, f"//table[@class='table table-bordered'][(position() = {table})]/tbody/tr/td[3]")
     CLOUDS_LOCATOR = (By.XPATH, '//a[contains(@href, "#Clouds")]/ancestor-or-self::table')
@@ -484,7 +485,6 @@ class ForBusinessPageLocators:
     WEATHER_ALERTS = By.XPATH, "(//a[@class='stats white-text'])[3]"
     WEATHER_MAPS = By.XPATH, "(//a[@class='stats white-text'])[4]"
     ENERGY_PREDICTION = By.XPATH, "(//a[@class='stats white-text'])[5]"
-
 
 
 class SearchResultPageLocators:

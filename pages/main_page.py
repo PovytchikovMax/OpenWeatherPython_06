@@ -2,7 +2,7 @@ from pages.base_page import BasePage
 from selenium.webdriver import ActionChains
 from selenium.webdriver.support import expected_conditions as EC
 from locators.locators import MainPageLocators, BasePageLocators
-from test_data.urls import MainPageUrls
+from test_data.urls import MainPageUrls, FooterImageUrls
 from test_data.all_links import Links
 from datetime import datetime, date
 from zoneinfo import ZoneInfo
@@ -291,6 +291,11 @@ class MainPage(BasePage):
         image = self.find_element(self.locators.DOWNLOAD_ON_THE_APP_STORE_IMAGE)
         assert image.is_displayed(), "The image is not visible in the Download on the App Store brand-link"
 
+    def check_image_is_correct_in_download_on_the_app_store_link(self):
+        image_src = self.find_element(self.locators.DOWNLOAD_ON_THE_APP_STORE_IMAGE).get_attribute("src")
+        assert image_src == FooterImageUrls.DOWNLOAD_ON_THE_APP_STORE_IMAGE_URL, \
+            "The image is not correct in the Download on the App Store brand-link"
+
     def get_header_search_field_attribute(self, attribute):
         '''To retrieve the value of a specific attribute from Header Search field'''
         search_placeholder = self.driver.find_element(*self.locators.HEADER_SEARCH_FIELD)
@@ -369,6 +374,7 @@ class MainPage(BasePage):
         footer = self.driver.find_element(*FooterLocators.FOOTER_COPYRIGHT)
         assert footer.is_displayed() and expected_footer_text in footer.text, \
             "The footer is not displayed or does not contain the expected text"
+
     def about_us_link_leads_to_correct_page(self):
         about_us_link = self.driver.find_element(*MainPageLocators.ABOUT_US_LINK)
         self.go_to_element(about_us_link)
@@ -637,7 +643,6 @@ class MainPage(BasePage):
     def enter_city_in_weather_in_your_city_field(self, city):
         input_city = self.driver.find_element(*self.locators.FIELD_WEATHER_IN_YUOR_CITY)
         input_city.send_keys(city)
-
 
     def check_footer_website_is_displayed(self, element):
         assert element.is_displayed() and self.driver.title not in 'Page not found (404) - OpenWeatherMap', \
