@@ -209,6 +209,10 @@ class TestMainPage:
         page = MainPage(driver)
         page.check_image_is_correct_in_download_on_the_app_store_link()
 
+    def test_tc_003_09_10_verify_image_presence_in_get_it_on_google_play_link(self, driver, open_and_load_main_page):
+        page = MainPage(driver)
+        page.check_image_is_present_in_get_it_on_google_play_link()
+
     def test_tc_003_12_01_check_historical_weather_data_link_functionality(self, driver, open_and_load_main_page):
         page = MainPage(driver)
         page.check_historical_weather_data_link_functionality()
