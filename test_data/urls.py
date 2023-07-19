@@ -8,6 +8,11 @@ class MainPageUrls:
     ASK_A_QUESTION_PAGE = "https://home.openweathermap.org/questions"
 
 
+class FooterImageUrls:
+    DOWNLOAD_ON_THE_APP_STORE_IMAGE_URL = \
+        "https://openweathermap.org/themes/openweathermap/assets/img/mobile_app/app-store-badge.svg"
+
+
 class SignInUrls:
     url_sign_in_page = "https://home.openweathermap.org/users/sign_in"
 
