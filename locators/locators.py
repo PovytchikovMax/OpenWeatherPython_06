@@ -40,6 +40,8 @@ class MainPageLocators:
     DOWNLOAD_OPENWEATHER_APP_TITLE = (By.CSS_SELECTOR, "#footer-website > div > div:nth-child(3) p")
     FAQ_LINK = (By.CSS_SELECTOR, ":nth-child(1) > :nth-child(2) > .section-content > ul > :nth-child(4) > a")
     FOOTER_COMMON_KIT = (By.CSS_SELECTOR, "#footer-website")
+    GET_IT_ON_GOOGLE_PLAY_IMAGE = (By.CSS_SELECTOR,
+                                   "#footer-website > div > :nth-child(3) > :nth-child(2) > :nth-child(2) img")
     HISTORICAL_WEATHER_DATA_LINK = (By.CSS_SELECTOR,
                                     "#footer-website div :nth-child(1) :nth-child(1) ul :nth-child(2) > a")
     HOW_TO_START = (By.XPATH, "//div[@id='footer-website']//a[text()='How to start']")

@@ -296,6 +296,10 @@ class MainPage(BasePage):
         assert image_src == FooterImageUrls.DOWNLOAD_ON_THE_APP_STORE_IMAGE_URL, \
             "The image is not correct in the Download on the App Store brand-link"
 
+    def check_image_is_present_in_get_it_on_google_play_link(self):
+        image = self.find_element(self.locators.GET_IT_ON_GOOGLE_PLAY_IMAGE)
+        assert image is not None, "The image is not present in the GET IT ON Google Play brand-link"
+
     def get_header_search_field_attribute(self, attribute):
         '''To retrieve the value of a specific attribute from Header Search field'''
         search_placeholder = self.driver.find_element(*self.locators.HEADER_SEARCH_FIELD)
