@@ -11,6 +11,8 @@ class MainPageUrls:
 class FooterImageUrls:
     DOWNLOAD_ON_THE_APP_STORE_IMAGE_URL = \
         "https://openweathermap.org/themes/openweathermap/assets/img/mobile_app/app-store-badge.svg"
+    GET_IT_ON_GOOGLE_PLAY_IMAGE_URL = \
+        "https://openweathermap.org/themes/openweathermap/assets/img/mobile_app/google-play-badge.png"
 
 
 class SignInUrls:
