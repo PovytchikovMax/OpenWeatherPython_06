@@ -278,6 +278,10 @@ class MainPage(BasePage):
         assert product_collections_module.is_displayed(), \
             "The footer is not displayed or does not contain the expected text"
 
+    def check_title_is_present_in_download_openweather_app_module(self):
+        module_title = self.find_element(self.locators.DOWNLOAD_OPENWEATHER_APP_TITLE)
+        assert module_title is not None, "The title is not present in the Download OpenWeather app module"
+
     def check_text_of_download_openweather_app_module_title(self, text):
         element_text = self.driver.find_element(*self.locators.DOWNLOAD_OPENWEATHER_APP_TITLE).text
         assert element_text == text, \
