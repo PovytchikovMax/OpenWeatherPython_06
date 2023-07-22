@@ -191,6 +191,10 @@ class TestMainPage:
         page = MainPage(driver, link=URL)
         page.check_about_us_link_is_clickable()
 
+    def test_tc_003_09_01_verify_title_presence_in_download_openweather_app_module(self, driver, open_and_load_main_page):
+        page = MainPage(driver)
+        page.check_title_is_present_in_download_openweather_app_module()
+
     def test_tc_003_09_06_verify_text_of_download_openweather_app_module_title(self, driver, open_and_load_main_page):
         page = MainPage(driver)
         page.check_text_of_download_openweather_app_module_title("Download OpenWeather app")
