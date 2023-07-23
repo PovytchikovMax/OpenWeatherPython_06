@@ -38,6 +38,7 @@ class MainPageLocators:
                                        "#footer-website > div > :nth-child(3) > :nth-child(2) > :nth-child(1) img")
     DOWNLOAD_OPENWEATHER_APP_SECTION = (By.CSS_SELECTOR, "#footer-website > div > div:nth-child(3)")
     DOWNLOAD_OPENWEATHER_APP_TITLE = (By.CSS_SELECTOR, "#footer-website > div > div:nth-child(3) p")
+    FACEBOOK_LINK = (By.CSS_SELECTOR, ".social > a:nth-child(1)")
     FAQ_LINK = (By.CSS_SELECTOR, ":nth-child(1) > :nth-child(2) > .section-content > ul > :nth-child(4) > a")
     FOOTER_COMMON_KIT = (By.CSS_SELECTOR, "#footer-website")
     GET_IT_ON_GOOGLE_PLAY_IMAGE = (By.CSS_SELECTOR,

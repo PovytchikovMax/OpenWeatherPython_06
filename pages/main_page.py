@@ -313,6 +313,10 @@ class MainPage(BasePage):
         assert image_src == FooterImageUrls.GET_IT_ON_GOOGLE_PLAY_IMAGE_URL, \
             "The image is not correct in the GET IT ON Google Play brand-link"
 
+    def check_facebook_link_visibility(self):
+        facebook_link = self.driver.find_element(*self.locators.FACEBOOK_LINK)
+        assert facebook_link.is_displayed(), "The Facebook brand-link is not visible"
+
     def get_header_search_field_attribute(self, attribute):
         '''To retrieve the value of a specific attribute from Header Search field'''
         search_placeholder = self.driver.find_element(*self.locators.HEADER_SEARCH_FIELD)
