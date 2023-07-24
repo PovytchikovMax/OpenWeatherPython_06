@@ -317,6 +317,10 @@ class MainPage(BasePage):
         facebook_link = self.driver.find_element(*self.locators.FACEBOOK_LINK)
         assert facebook_link.is_displayed(), "The Facebook brand-link is not visible"
 
+    def check_facebook_link_clickaility(self):
+        facebook_link = self.driver.find_element(*self.locators.FACEBOOK_LINK)
+        assert facebook_link.is_enabled(), "The Facebook brand-link is not clickable"
+
     def get_header_search_field_attribute(self, attribute):
         '''To retrieve the value of a specific attribute from Header Search field'''
         search_placeholder = self.driver.find_element(*self.locators.HEADER_SEARCH_FIELD)
