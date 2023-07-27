@@ -230,11 +230,15 @@ class TestMainPage:
         page = MainPage(driver)
         page.check_facebook_link_visibility()
 
-    def test_tc_003_10_12_verify_display_of_facebook_brand_link(self, driver, open_and_load_main_page):
+    def test_tc_003_10_12_verify_clickability_of_facebook_brand_link(self, driver, open_and_load_main_page):
         page = MainPage(driver)
         page.check_facebook_link_clickaility()
 
     def test_tc_003_10_13_verify_image_presence_in_facebook_brand_link(self, driver, open_and_load_main_page):
+        page = MainPage(driver)
+        page.check_image_is_present_in_facebook_link()
+
+    def test_tc_003_10_14_verify_image_visibility_in_facebook_brand_link(self, driver, open_and_load_main_page):
         page = MainPage(driver)
         page.check_image_is_present_in_facebook_link()
 
