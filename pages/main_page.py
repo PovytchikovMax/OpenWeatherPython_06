@@ -329,6 +329,11 @@ class MainPage(BasePage):
         image = self.find_element(self.locators.FACEBOOK_IMAGE)
         assert image.is_displayed(), "The image is not visible in the FACEBOOK brand-link"
 
+    def check_image_is_correct_in_facebook_brand_link(self):
+        image_src = self.find_element(self.locators.FACEBOOK_IMAGE).get_attribute("src")
+        assert image_src == FooterImageUrls.FACEBOOK_IMAGE_URL, \
+            "The image is not correct in the Facebook brand-link"
+
     def get_header_search_field_attribute(self, attribute):
         '''To retrieve the value of a specific attribute from Header Search field'''
         search_placeholder = self.driver.find_element(*self.locators.HEADER_SEARCH_FIELD)
