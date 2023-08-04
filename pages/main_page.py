@@ -342,6 +342,10 @@ class MainPage(BasePage):
         twitter_link = self.driver.find_element(*self.locators.TWITTER_LINK)
         assert twitter_link.is_enabled(), "The Twitter brand-link is not clickable"
 
+    def check_image_is_present_in_twitter_link(self):
+        image = self.find_element(self.locators.TWITTER_IMAGE)
+        assert image is not None, "The image is not present in the Twitter brand-link"
+
     def get_header_search_field_attribute(self, attribute):
         '''To retrieve the value of a specific attribute from Header Search field'''
         search_placeholder = self.driver.find_element(*self.locators.HEADER_SEARCH_FIELD)
