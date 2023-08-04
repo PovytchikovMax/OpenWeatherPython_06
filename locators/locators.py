@@ -34,20 +34,26 @@ class MainPageLocators:
     CONNECT_YOUR_WEATHER_STATION_LINK = (By.CSS_SELECTOR, "li a[href*='station']")
     COOKIES = (By.XPATH, "//button[contains(text(), 'Allow all')]")
     CURRENT_AND_FORECAST_APIS_LINK = (By.CSS_SELECTOR, "#footer-website a[href='/api#current']")
-    DOWNLOAD_ON_THE_APP_STORE_IMAGE = (By.CSS_SELECTOR,
-                                       "#footer-website > div > :nth-child(3) > :nth-child(2) > :nth-child(1) img")
+    # DOWNLOAD_ON_THE_APP_STORE_IMAGE = (By.CSS_SELECTOR,
+    #                                    "#footer-website > div > :nth-child(3) > :nth-child(2) > :nth-child(1) img")
+    DOWNLOAD_ON_THE_APP_STORE_IMAGE = \
+        (By.CSS_SELECTOR, "#footer-website div :nth-child(3) > div:nth-child(1) :nth-child(2) :nth-child(1) img")
     DOWNLOAD_OPENWEATHER_APP_SECTION = (By.CSS_SELECTOR, "#footer-website > div > div:nth-child(3)")
     DOWNLOAD_OPENWEATHER_APP_TITLE = (By.CSS_SELECTOR, "#footer-website > div > div:nth-child(3) p")
     FACEBOOK_IMAGE = (By.CSS_SELECTOR, ".social > a:nth-child(1) img")
     FACEBOOK_LINK = (By.CSS_SELECTOR, ".social > a:nth-child(1)")
     FAQ_LINK = (By.CSS_SELECTOR, ":nth-child(1) > :nth-child(2) > .section-content > ul > :nth-child(4) > a")
     FOOTER_COMMON_KIT = (By.CSS_SELECTOR, "#footer-website")
-    GET_IT_ON_GOOGLE_PLAY_IMAGE = (By.CSS_SELECTOR,
-                                   "#footer-website > div > :nth-child(3) > :nth-child(2) > :nth-child(2) img")
+    # GET_IT_ON_GOOGLE_PLAY_IMAGE = (By.CSS_SELECTOR,
+    #                                "#footer-website > div > :nth-child(3) > :nth-child(2) > :nth-child(2) img")
+    GET_IT_ON_GOOGLE_PLAY_IMAGE = \
+        (By.CSS_SELECTOR, "#footer-website div :nth-child(3) > div:nth-child(1) :nth-child(2) :nth-child(2) img")
+
     HISTORICAL_WEATHER_DATA_LINK = (By.CSS_SELECTOR,
                                     "#footer-website div :nth-child(1) :nth-child(1) ul :nth-child(2) > a")
     HOW_TO_START = (By.XPATH, "//div[@id='footer-website']//a[text()='How to start']")
-    HOW_TO_START_LINK = (By.CSS_SELECTOR, "div[class='section-content'] a[href*='appid']")
+    # HOW_TO_START_LINK = (By.CSS_SELECTOR, "div[class='section-content'] a[href*='appid']")
+    HOW_TO_START_LINK = (By.CSS_SELECTOR, "#footer-website > div > :nth-child(1) > div:nth-child(2) :nth-child(1) > a")
     OPENWEATHER_FOR_BUSINESS_LINK = (By.CSS_SELECTOR, ".not-foldable > .section-content > ul > :nth-child(3) > a")
     OUR_TECHNOLOGY_LINK = (By.XPATH, "//a[contains(text(), 'Our technology')]")
     PRICING_LINK = (By.CSS_SELECTOR, "#footer-website > div > :nth-child(1) > div:nth-child(2) :nth-child(2) > a")
@@ -64,6 +70,7 @@ class MainPageLocators:
     TERMS_AND_CONDITIONS_TITLE = (By.CSS_SELECTOR, ":nth-child(2) > :nth-child(2) > .section-heading")
     TERMS_AND_CONDITIONS_OF_SALE_LINK = (By.CSS_SELECTOR,
                                          "#footer-website :nth-child(2) :nth-child(2) div li:nth-child(1) a")
+    TWITTER_IMAGE = (By.CSS_SELECTOR, ".social > a:nth-child(2) img")
     TWITTER_LINK = (By.CSS_SELECTOR, ".social > a:nth-child(2)")
     WEATHER_DASHBOARD_LINK = (By.XPATH, "//a[contains(text(), 'Weather Dashboard')]")
     WEATHER_MAPS_LINK = (By.XPATH, "//a[contains(text(), 'Weather Maps')]")
