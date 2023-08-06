@@ -240,7 +240,7 @@ class TestMainPage:
 
     def test_tc_003_10_14_verify_image_visibility_in_facebook_brand_link(self, driver, open_and_load_main_page):
         page = MainPage(driver)
-        page.check_image_is_present_in_facebook_link()
+        page.check_image_is_visible_in_facebook_link()
 
     def test_tc_003_10_15_verify_image_correctness_in_facebook_brand_link(self, driver, open_and_load_main_page):
         page = MainPage(driver)
@@ -257,6 +257,10 @@ class TestMainPage:
     def test_tc_003_10_18_verify_image_presence_in_twitter_brand_link(self, driver, open_and_load_main_page):
         page = MainPage(driver)
         page.check_image_is_present_in_twitter_link()
+
+    def test_tc_003_10_19_verify_image_visibility_in_twitter_brand_link(self, driver, open_and_load_main_page):
+        page = MainPage(driver)
+        page.check_image_is_visible_in_twitter_link()
 
     def test_tc_003_12_01_check_historical_weather_data_link_functionality(self, driver, open_and_load_main_page):
         page = MainPage(driver)
