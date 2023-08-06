@@ -327,7 +327,7 @@ class MainPage(BasePage):
 
     def check_image_is_visible_in_facebook_link(self):
         image = self.find_element(self.locators.FACEBOOK_IMAGE)
-        assert image.is_displayed(), "The image is not visible in the FACEBOOK brand-link"
+        assert image.is_displayed(), "The image is not visible in the Facebook brand-link"
 
     def check_image_is_correct_in_facebook_brand_link(self):
         image_src = self.find_element(self.locators.FACEBOOK_IMAGE).get_attribute("src")
@@ -345,6 +345,10 @@ class MainPage(BasePage):
     def check_image_is_present_in_twitter_link(self):
         image = self.find_element(self.locators.TWITTER_IMAGE)
         assert image is not None, "The image is not present in the Twitter brand-link"
+
+    def check_image_is_visible_in_twitter_link(self):
+        image = self.find_element(self.locators.TWITTER_IMAGE)
+        assert image.is_displayed(), "The image is not visible in the Twitter brand-link"
 
     def get_header_search_field_attribute(self, attribute):
         '''To retrieve the value of a specific attribute from Header Search field'''
