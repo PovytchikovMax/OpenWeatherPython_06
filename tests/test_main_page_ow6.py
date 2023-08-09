@@ -270,6 +270,10 @@ class TestMainPage:
         page = MainPage(driver)
         page.check_telegram_link_visibility()
 
+    def test_tc_003_10_22_verify_clickability_of_telegram_brand_link(self, driver, open_and_load_main_page):
+        page = MainPage(driver)
+        page.check_telegram_link_clickaility()
+
     def test_tc_003_12_01_check_historical_weather_data_link_functionality(self, driver, open_and_load_main_page):
         page = MainPage(driver)
         page.check_historical_weather_data_link_functionality()
