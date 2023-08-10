@@ -363,6 +363,10 @@ class MainPage(BasePage):
         telegram_link = self.driver.find_element(*self.locators.TELEGRAM_LINK)
         assert telegram_link.is_enabled(), "The Telegram brand-link is not clickable"
 
+    def check_image_is_present_in_telegram_link(self):
+        image = self.find_element(self.locators.TELEGRAM_IMAGE)
+        assert image is not None, "The image is not present in the Telegram brand-link"
+
     def get_header_search_field_attribute(self, attribute):
         '''To retrieve the value of a specific attribute from Header Search field'''
         search_placeholder = self.driver.find_element(*self.locators.HEADER_SEARCH_FIELD)
