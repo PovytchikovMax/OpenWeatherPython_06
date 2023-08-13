@@ -54,6 +54,7 @@ class MainPageLocators:
     HOW_TO_START = (By.XPATH, "//div[@id='footer-website']//a[text()='How to start']")
     # HOW_TO_START_LINK = (By.CSS_SELECTOR, "div[class='section-content'] a[href*='appid']")
     HOW_TO_START_LINK = (By.CSS_SELECTOR, "#footer-website > div > :nth-child(1) > div:nth-child(2) :nth-child(1) > a")
+    LINKEDIN_IMAGE = (By.CSS_SELECTOR, ".social > a:nth-child(3) img")
     OPENWEATHER_FOR_BUSINESS_LINK = (By.CSS_SELECTOR, ".not-foldable > .section-content > ul > :nth-child(3) > a")
     OUR_TECHNOLOGY_LINK = (By.XPATH, "//a[contains(text(), 'Our technology')]")
     PRICING_LINK = (By.CSS_SELECTOR, "#footer-website > div > :nth-child(1) > div:nth-child(2) :nth-child(2) > a")
