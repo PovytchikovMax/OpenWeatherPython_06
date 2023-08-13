@@ -376,6 +376,10 @@ class MainPage(BasePage):
         assert image_src == FooterImageUrls.TELEGRAM_IMAGE_URL, \
             "The image is not correct in the Telegram brand-link"
 
+    def check_image_is_present_in_linkedin_link(self):
+        image = self.find_element(self.locators.LINKEDIN_IMAGE)
+        assert image is not None, "The image is not present in the Linkedin brand-link"
+
     def get_header_search_field_attribute(self, attribute):
         '''To retrieve the value of a specific attribute from Header Search field'''
         search_placeholder = self.driver.find_element(*self.locators.HEADER_SEARCH_FIELD)
