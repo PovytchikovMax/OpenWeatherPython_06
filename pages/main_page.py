@@ -380,6 +380,9 @@ class MainPage(BasePage):
         image = self.find_element(self.locators.LINKEDIN_IMAGE)
         assert image is not None, "The image is not present in the Linkedin brand-link"
 
+    def check_element_image_is_visible(self, element):
+        assert element.is_displayed(), "The image is not visible in the element"
+
     def get_header_search_field_attribute(self, attribute):
         '''To retrieve the value of a specific attribute from Header Search field'''
         search_placeholder = self.driver.find_element(*self.locators.HEADER_SEARCH_FIELD)
