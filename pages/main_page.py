@@ -383,6 +383,10 @@ class MainPage(BasePage):
     def check_element_image_is_visible(self, element):
         assert element.is_displayed(), "The image is not visible in the element"
 
+    def check_image_is_correct_in_linkedin_link(self, element, url):
+        image_src = element.get_attribute("src")
+        assert image_src == url, "The image is not correct in the element"
+
     def get_header_search_field_attribute(self, attribute):
         '''To retrieve the value of a specific attribute from Header Search field'''
         search_placeholder = self.driver.find_element(*self.locators.HEADER_SEARCH_FIELD)
