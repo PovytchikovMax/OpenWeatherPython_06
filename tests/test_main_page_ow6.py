@@ -2,7 +2,7 @@ import pytest
 
 from pages.main_page import MainPage
 from locators.locators import MainPageLocators, FooterLocators, BasePageLocators, PartnersLocators
-from test_data.urls import MainPageUrls, SuitsUrls
+from test_data.urls import MainPageUrls, SuitsUrls, FooterImageUrls
 from test_data.all_links import Links
 from test_data.main_page_data import *
 
@@ -295,6 +295,12 @@ class TestMainPage:
         linkedin_image = page.find_element(MainPageLocators.LINKEDIN_IMAGE)
         page.go_to_element(linkedin_image)
         page.check_element_image_is_visible(linkedin_image)
+
+    def test_tc_003_10_28_verify_image_correctness_in_linkedin_brand_link(self, driver, open_and_load_main_page):
+        page = MainPage(driver)
+        linkedin_image = page.find_element(MainPageLocators.LINKEDIN_IMAGE)
+        linkedin_image_url = FooterImageUrls.LINKEDIN_IMAGE_URL
+        page.check_image_is_correct_in_linkedin_link(linkedin_image, linkedin_image_url)
 
     def test_tc_003_12_01_check_historical_weather_data_link_functionality(self, driver, open_and_load_main_page):
         page = MainPage(driver)
