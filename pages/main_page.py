@@ -380,10 +380,13 @@ class MainPage(BasePage):
         image = self.find_element(self.locators.LINKEDIN_IMAGE)
         assert image is not None, "The image is not present in the Linkedin brand-link"
 
+    def check_image_is_present_in_the_element(self, element):
+        assert element is not None, "The image is not present in the element"
+
     def check_element_image_is_visible(self, element):
         assert element.is_displayed(), "The image is not visible in the element"
 
-    def check_image_is_correct_in_linkedin_link(self, element, url):
+    def check_image_is_correct_in_the_link(self, element, url):
         image_src = element.get_attribute("src")
         assert image_src == url, "The image is not correct in the element"
 
