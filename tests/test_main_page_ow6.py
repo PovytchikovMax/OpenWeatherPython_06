@@ -300,7 +300,12 @@ class TestMainPage:
         page = MainPage(driver)
         linkedin_image = page.find_element(MainPageLocators.LINKEDIN_IMAGE)
         linkedin_image_url = FooterImageUrls.LINKEDIN_IMAGE_URL
-        page.check_image_is_correct_in_linkedin_link(linkedin_image, linkedin_image_url)
+        page.check_image_is_correct_in_the_link(linkedin_image, linkedin_image_url)
+
+    def test_tc_003_10_29_verify_image_presence_in_medium_brand_link(self, driver, open_and_load_main_page):
+        page = MainPage(driver)
+        medium_image = page.find_element(MainPageLocators.MEDIUM_IMAGE)
+        page.check_image_is_present_in_the_element(medium_image)
 
     def test_tc_003_12_01_check_historical_weather_data_link_functionality(self, driver, open_and_load_main_page):
         page = MainPage(driver)
