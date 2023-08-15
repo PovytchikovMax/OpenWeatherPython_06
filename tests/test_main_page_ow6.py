@@ -307,6 +307,12 @@ class TestMainPage:
         medium_image = page.find_element(MainPageLocators.MEDIUM_IMAGE)
         page.check_image_is_present_in_the_element(medium_image)
 
+    def test_tc_003_10_30_verify_image_visibility_in_medium_brand_link(self, driver, open_and_load_main_page):
+        page = MainPage(driver)
+        medium_image = page.find_element(MainPageLocators.MEDIUM_IMAGE)
+        page.go_to_element(medium_image)
+        page.check_element_image_is_visible(medium_image)
+
     def test_tc_003_12_01_check_historical_weather_data_link_functionality(self, driver, open_and_load_main_page):
         page = MainPage(driver)
         page.check_historical_weather_data_link_functionality()
