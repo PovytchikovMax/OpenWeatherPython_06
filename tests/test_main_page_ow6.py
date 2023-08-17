@@ -284,7 +284,9 @@ class TestMainPage:
 
     def test_tc_003_10_25_verify_image_correctness_in_telegram_brand_link(self, driver, open_and_load_main_page):
         page = MainPage(driver)
-        page.check_image_is_correct_in_telegram_link()
+        telegram_image = page.find_element(MainPageLocators.TELEGRAM_IMAGE)
+        telegram_image_url = FooterImageUrls.TELEGRAM_IMAGE_URL
+        page.check_image_is_correct_in_the_element(telegram_image, telegram_image_url)
 
     def test_tc_003_10_26_verify_image_presence_in_linkedin_brand_link(self, driver, open_and_load_main_page):
         page = MainPage(driver)

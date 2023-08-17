@@ -371,11 +371,6 @@ class MainPage(BasePage):
         image = self.find_element(self.locators.TELEGRAM_IMAGE)
         assert image.is_displayed(), "The image is not visible in the Telegram brand-link"
 
-    def check_image_is_correct_in_telegram_link(self):
-        image_src = self.find_element(self.locators.TELEGRAM_IMAGE).get_attribute("src")
-        assert image_src == FooterImageUrls.TELEGRAM_IMAGE_URL, \
-            "The image is not correct in the Telegram brand-link"
-
     def check_image_is_present_in_linkedin_link(self):
         image = self.find_element(self.locators.LINKEDIN_IMAGE)
         assert image is not None, "The image is not present in the Linkedin brand-link"
