@@ -264,7 +264,9 @@ class TestMainPage:
 
     def test_tc_003_10_20_verify_image_correctness_in_twitter_brand_link(self, driver, open_and_load_main_page):
         page = MainPage(driver)
-        page.check_image_is_correct_in_twitter_link()
+        twitter_image = page.find_element(MainPageLocators.TWITTER_IMAGE)
+        twitter_image_url = FooterImageUrls.TWITTER_IMAGE_URL
+        page.check_image_is_correct_in_the_element(twitter_image, twitter_image_url)
 
     def test_tc_003_10_21_verify_display_of_telegram_brand_link(self, driver, open_and_load_main_page):
         page = MainPage(driver)
