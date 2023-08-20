@@ -48,7 +48,7 @@ class MainPageLocators:
     #                                "#footer-website > div > :nth-child(3) > :nth-child(2) > :nth-child(2) img")
     GET_IT_ON_GOOGLE_PLAY_IMAGE = \
         (By.CSS_SELECTOR, "#footer-website div :nth-child(3) > div:nth-child(1) :nth-child(2) :nth-child(2) img")
-
+    GITHUB_IMAGE = (By.CSS_SELECTOR, ".social > a:nth-child(6) img")
     HISTORICAL_WEATHER_DATA_LINK = (By.CSS_SELECTOR,
                                     "#footer-website div :nth-child(1) :nth-child(1) ul :nth-child(2) > a")
     HOW_TO_START = (By.XPATH, "//div[@id='footer-website']//a[text()='How to start']")

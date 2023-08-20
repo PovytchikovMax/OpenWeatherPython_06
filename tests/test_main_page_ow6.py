@@ -325,6 +325,11 @@ class TestMainPage:
         medium_image_url = FooterImageUrls.MEDIUM_IMAGE_URL
         page.check_image_is_correct_in_the_element(medium_image, medium_image_url)
 
+    def test_tc_003_10_32_verify_image_presence_in_github_brand_link(self, driver, open_and_load_main_page):
+        page = MainPage(driver)
+        github_image = page.find_element(MainPageLocators.GITHUB_IMAGE)
+        page.check_image_is_present_in_the_element(github_image)
+
     def test_tc_003_12_01_check_historical_weather_data_link_functionality(self, driver, open_and_load_main_page):
         page = MainPage(driver)
         page.check_historical_weather_data_link_functionality()
