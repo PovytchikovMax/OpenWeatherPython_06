@@ -244,7 +244,9 @@ class TestMainPage:
 
     def test_tc_003_10_15_verify_image_correctness_in_facebook_brand_link(self, driver, open_and_load_main_page):
         page = MainPage(driver)
-        page.check_image_is_correct_in_facebook_brand_link()
+        facebook_image = page.find_element(MainPageLocators.FACEBOOK_IMAGE)
+        facebook_image_url = FooterImageUrls.FACEBOOK_IMAGE_URL
+        page.check_image_is_correct_in_the_element(facebook_image, facebook_image_url)
 
     def test_tc_003_10_16_verify_display_of_twitter_brand_link(self, driver, open_and_load_main_page):
         page = MainPage(driver)
