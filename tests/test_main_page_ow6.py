@@ -236,7 +236,8 @@ class TestMainPage:
 
     def test_tc_003_10_13_verify_image_presence_in_facebook_brand_link(self, driver, open_and_load_main_page):
         page = MainPage(driver)
-        page.check_image_is_present_in_facebook_link()
+        facebook_image = page.find_element(MainPageLocators.FACEBOOK_IMAGE)
+        page.check_image_is_present_in_the_element(facebook_image)
 
     def test_tc_003_10_14_verify_image_visibility_in_facebook_brand_link(self, driver, open_and_load_main_page):
         page = MainPage(driver)
