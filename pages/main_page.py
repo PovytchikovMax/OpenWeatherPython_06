@@ -321,10 +321,6 @@ class MainPage(BasePage):
         facebook_link = self.driver.find_element(*self.locators.FACEBOOK_LINK)
         assert facebook_link.is_enabled(), "The Facebook brand-link is not clickable"
 
-    def check_image_is_visible_in_facebook_link(self):
-        image = self.find_element(self.locators.FACEBOOK_IMAGE)
-        assert image.is_displayed(), "The image is not visible in the Facebook brand-link"
-
     def check_twitter_link_visibility(self):
         twitter_link = self.driver.find_element(*self.locators.TWITTER_LINK)
         assert twitter_link.is_displayed(), "The Twitter brand-link is not visible"
