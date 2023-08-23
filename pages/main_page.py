@@ -329,10 +329,6 @@ class MainPage(BasePage):
         twitter_link = self.driver.find_element(*self.locators.TWITTER_LINK)
         assert twitter_link.is_enabled(), "The Twitter brand-link is not clickable"
 
-    def check_image_is_visible_in_twitter_link(self):
-        image = self.find_element(self.locators.TWITTER_IMAGE)
-        assert image.is_displayed(), "The image is not visible in the Twitter brand-link"
-
     def check_telegram_link_visibility(self):
         telegram_link = self.driver.find_element(*self.locators.TELEGRAM_LINK)
         assert telegram_link.is_displayed(), "The Telegram brand-link is not visible"

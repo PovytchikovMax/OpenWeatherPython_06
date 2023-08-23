@@ -266,7 +266,9 @@ class TestMainPage:
 
     def test_tc_003_10_19_verify_image_visibility_in_twitter_brand_link(self, driver, open_and_load_main_page):
         page = MainPage(driver)
-        page.check_image_is_visible_in_twitter_link()
+        twitter_image = page.find_element(MainPageLocators.TWITTER_IMAGE)
+        page.go_to_element(twitter_image)
+        page.check_element_image_is_visible(twitter_image)
 
     def test_tc_003_10_20_verify_image_correctness_in_twitter_brand_link(self, driver, open_and_load_main_page):
         page = MainPage(driver)
