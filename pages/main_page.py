@@ -337,10 +337,6 @@ class MainPage(BasePage):
         telegram_link = self.driver.find_element(*self.locators.TELEGRAM_LINK)
         assert telegram_link.is_enabled(), "The Telegram brand-link is not clickable"
 
-    def check_image_is_present_in_telegram_link(self):
-        image = self.find_element(self.locators.TELEGRAM_IMAGE)
-        assert image is not None, "The image is not present in the Telegram brand-link"
-
     def check_image_is_visible_in_telegram_link(self):
         image = self.find_element(self.locators.TELEGRAM_IMAGE)
         assert image.is_displayed(), "The image is not visible in the Telegram brand-link"
