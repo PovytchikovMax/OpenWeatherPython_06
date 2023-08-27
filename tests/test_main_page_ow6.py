@@ -303,7 +303,8 @@ class TestMainPage:
 
     def test_tc_003_10_26_verify_image_presence_in_linkedin_brand_link(self, driver, open_and_load_main_page):
         page = MainPage(driver)
-        page.check_image_is_present_in_linkedin_link()
+        linkedin_image = page.find_element(MainPageLocators.LINKEDIN_IMAGE)
+        page.check_image_is_present_in_the_element(linkedin_image)
 
     def test_tc_003_10_27_verify_image_visibility_in_linkedin_brand_link(self, driver, open_and_load_main_page):
         page = MainPage(driver)
