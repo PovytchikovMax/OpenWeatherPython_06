@@ -287,9 +287,9 @@ class MainPage(BasePage):
         assert element_text == text, \
             f"Actual text '{element_text}' of the Download OpenWeather app module title does not match expected '{text}'"
 
-    def check_image_is_present_in_download_on_the_app_store_link(self):
-        image = self.find_element(self.locators.DOWNLOAD_ON_THE_APP_STORE_IMAGE)
-        assert image is not None, "The image is not present in the Download on the App Store brand-link"
+    # def check_image_is_present_in_download_on_the_app_store_link(self):
+    #     image = self.find_element(self.locators.DOWNLOAD_ON_THE_APP_STORE_IMAGE)
+    #     assert image is not None, "The image is not present in the Download on the App Store brand-link"
 
     def check_image_is_visible_in_download_on_the_app_store_link(self):
         image = self.find_element(self.locators.DOWNLOAD_ON_THE_APP_STORE_IMAGE)
