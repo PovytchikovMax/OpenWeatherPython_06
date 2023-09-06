@@ -207,7 +207,9 @@ class TestMainPage:
     def test_tc_003_09_08_verify_image_visibility_in_download_on_the_app_store_link(self, driver,
                                                                                     open_and_load_main_page):
         page = MainPage(driver)
-        page.check_image_is_visible_in_download_on_the_app_store_link()
+        download_on_the_app_store_image = page.find_element(MainPageLocators.DOWNLOAD_ON_THE_APP_STORE_IMAGE)
+        page.go_to_element(download_on_the_app_store_image)
+        page.check_element_image_is_visible(download_on_the_app_store_image)
 
     def test_tc_003_09_09_verify_image_correctness_in_download_on_the_app_store_link(self, driver,
                                                                                     open_and_load_main_page):
