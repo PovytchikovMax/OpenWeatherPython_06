@@ -212,9 +212,11 @@ class TestMainPage:
         page.check_element_image_is_visible(download_on_the_app_store_image)
 
     def test_tc_003_09_09_verify_image_correctness_in_download_on_the_app_store_link(self, driver,
-                                                                                    open_and_load_main_page):
+                                                                                     open_and_load_main_page):
         page = MainPage(driver)
-        page.check_image_is_correct_in_download_on_the_app_store_link()
+        download_on_the_app_store_image = page.find_element(MainPageLocators.DOWNLOAD_ON_THE_APP_STORE_IMAGE)
+        download_on_the_app_store_image_url = FooterImageUrls.DOWNLOAD_ON_THE_APP_STORE_IMAGE_URL
+        page.check_image_is_correct_in_the_element(download_on_the_app_store_image, download_on_the_app_store_image_url)
 
     def test_tc_003_09_10_verify_image_presence_in_get_it_on_google_play_link(self, driver, open_and_load_main_page):
         page = MainPage(driver)
