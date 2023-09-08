@@ -287,10 +287,6 @@ class MainPage(BasePage):
         assert element_text == text, \
             f"Actual text '{element_text}' of the Download OpenWeather app module title does not match expected '{text}'"
 
-    def check_image_is_present_in_get_it_on_google_play_link(self):
-        image = self.find_element(self.locators.GET_IT_ON_GOOGLE_PLAY_IMAGE)
-        assert image is not None, "The image is not present in the GET IT ON Google Play brand-link"
-
     def check_image_is_visible_in_get_it_on_google_play_link(self):
         image = self.find_element(self.locators.GET_IT_ON_GOOGLE_PLAY_IMAGE)
         assert image.is_displayed(), "The image is not visible in the GET IT ON Google Play brand-link"
