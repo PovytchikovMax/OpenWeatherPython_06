@@ -225,7 +225,9 @@ class TestMainPage:
 
     def test_tc_003_09_11_verify_image_visibility_in_get_it_on_google_play_link(self, driver, open_and_load_main_page):
         page = MainPage(driver)
-        page.check_image_is_visible_in_get_it_on_google_play_link()
+        get_it_on_google_play_image = page.find_element(MainPageLocators.GET_IT_ON_GOOGLE_PLAY_IMAGE)
+        page.go_to_element(get_it_on_google_play_image)
+        page.check_element_image_is_visible(get_it_on_google_play_image)
 
     def test_tc_003_09_12_verify_image_correctness_in_get_it_on_google_play_link(self, driver, open_and_load_main_page):
         page = MainPage(driver)
