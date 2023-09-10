@@ -287,11 +287,6 @@ class MainPage(BasePage):
         assert element_text == text, \
             f"Actual text '{element_text}' of the Download OpenWeather app module title does not match expected '{text}'"
 
-    def check_image_is_correct_in_get_it_on_google_play_link(self):
-        image_src = self.find_element(self.locators.GET_IT_ON_GOOGLE_PLAY_IMAGE).get_attribute("src")
-        assert image_src == FooterImageUrls.GET_IT_ON_GOOGLE_PLAY_IMAGE_URL, \
-            "The image is not correct in the GET IT ON Google Play brand-link"
-
     def check_facebook_link_visibility(self):
         facebook_link = self.driver.find_element(*self.locators.FACEBOOK_LINK)
         assert facebook_link.is_displayed(), "The Facebook brand-link is not visible"

@@ -231,7 +231,9 @@ class TestMainPage:
 
     def test_tc_003_09_12_verify_image_correctness_in_get_it_on_google_play_link(self, driver, open_and_load_main_page):
         page = MainPage(driver)
-        page.check_image_is_correct_in_get_it_on_google_play_link()
+        get_it_on_google_play_image = page.find_element(MainPageLocators.GET_IT_ON_GOOGLE_PLAY_IMAGE)
+        get_it_on_google_play_image_url = FooterImageUrls.GET_IT_ON_GOOGLE_PLAY_IMAGE_URL
+        page.check_image_is_correct_in_the_element(get_it_on_google_play_image, get_it_on_google_play_image_url)
 
     def test_tc_003_10_11_verify_display_of_facebook_brand_link(self, driver, open_and_load_main_page):
         page = MainPage(driver)
