@@ -2,7 +2,7 @@ from pages.base_page import BasePage
 from selenium.webdriver import ActionChains
 from selenium.webdriver.support import expected_conditions as EC
 from locators.locators import MainPageLocators, BasePageLocators
-from test_data.urls import MainPageUrls, FooterImageUrls
+# from test_data.urls import MainPageUrls, FooterImageUrls
 from test_data.all_links import Links
 from datetime import datetime, date
 from zoneinfo import ZoneInfo
@@ -49,10 +49,6 @@ class MainPage(BasePage):
         lines = self.driver.find_elements(*self.locators.LINE_IN_8_DAYS_FORECAST_LOCATOR)
         for line in lines:
             assert line.is_displayed()
-
-    def check_footer_is_present(self):
-        footer_common_kit = self.element_is_present(self.locators.FOOTER_COMMON_KIT)
-        assert footer_common_kit is not None, "Footer is not present in the DOM tree"
 
     def check_product_collections_section_is_visible(self):
         product_collections_section = self.element_is_visible(self.locators.PRODUCT_COLLECTIONS_SECTION)
@@ -310,6 +306,9 @@ class MainPage(BasePage):
     def check_telegram_link_clickaility(self):
         telegram_link = self.driver.find_element(*self.locators.TELEGRAM_LINK)
         assert telegram_link.is_enabled(), "The Telegram brand-link is not clickable"
+
+    def check_element_is_present_in_the_dom_tree(self, element):
+        assert element is not None, "The image is not present in the element"
 
     def check_image_is_present_in_the_element(self, element):
         assert element is not None, "The image is not present in the element"

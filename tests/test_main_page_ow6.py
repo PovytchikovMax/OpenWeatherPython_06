@@ -25,9 +25,11 @@ class TestMainPage:
         main_page = MainPage(driver)
         main_page.element_is_displayed(MainPageLocators.AGRICULTURE_ANALYTICS_TITLE_LOCATOR, wait)
 
-    def test_tc_003_01_03_footer_presence_in_the_dom_tree(self, driver, open_and_load_main_page):
-        page = MainPage(driver)
-        page.check_footer_is_present()
+    @pytest.mark.parametrize('URL', URLs)
+    def test_tc_003_01_03_verify_footer_presence_in_the_dom_tree_on_pages(self, driver, open_and_load_main_page, URL):
+        page = MainPage(driver, link=URL)
+        footer_common_kit = page.find_element(MainPageLocators.FOOTER_COMMON_KIT)
+        page.check_element_is_present_in_the_dom_tree(footer_common_kit)
 
     @pytest.mark.parametrize('URL', URLs)
     def test_tc_003_02_02_verify_display_of_product_collections_module_on_pages(self, driver,
