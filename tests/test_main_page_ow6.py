@@ -363,6 +363,11 @@ class TestMainPage:
         github_image_url = FooterImageUrls.GITHUB_IMAGE_URL
         page.check_image_is_correct_in_the_element(github_image, github_image_url)
 
+    def test_tc_003_10_35_verify_image_presence_in_the_rmets_element(self, driver, open_and_load_main_page):
+        page = MainPage(driver)
+        rmets_image = page.find_element(MainPageLocators.RMETS_IMAGE)
+        page.check_image_is_present_in_the_element(rmets_image)
+
     def test_tc_003_12_01_check_historical_weather_data_link_functionality(self, driver, open_and_load_main_page):
         page = MainPage(driver)
         page.check_historical_weather_data_link_functionality()
