@@ -44,15 +44,12 @@ class MainPageLocators:
     FACEBOOK_LINK = (By.CSS_SELECTOR, ".social > a:nth-child(1)")
     FAQ_LINK = (By.CSS_SELECTOR, ":nth-child(1) > :nth-child(2) > .section-content > ul > :nth-child(4) > a")
     FOOTER_COMMON_KIT = (By.CSS_SELECTOR, "#footer-website")
-    # GET_IT_ON_GOOGLE_PLAY_IMAGE = (By.CSS_SELECTOR,
-    #                                "#footer-website > div > :nth-child(3) > :nth-child(2) > :nth-child(2) img")
     GET_IT_ON_GOOGLE_PLAY_IMAGE = \
         (By.CSS_SELECTOR, "#footer-website div :nth-child(3) > div:nth-child(1) :nth-child(2) :nth-child(2) img")
     GITHUB_IMAGE = (By.CSS_SELECTOR, ".social > a:nth-child(6) img")
     HISTORICAL_WEATHER_DATA_LINK = (By.CSS_SELECTOR,
                                     "#footer-website div :nth-child(1) :nth-child(1) ul :nth-child(2) > a")
     HOW_TO_START = (By.XPATH, "//div[@id='footer-website']//a[text()='How to start']")
-    # HOW_TO_START_LINK = (By.CSS_SELECTOR, "div[class='section-content'] a[href*='appid']")
     HOW_TO_START_LINK = (By.CSS_SELECTOR, "#footer-website > div > :nth-child(1) > div:nth-child(2) :nth-child(1) > a")
     LINKEDIN_IMAGE = (By.CSS_SELECTOR, ".social > a:nth-child(3) img")
     MEDIUM_IMAGE = (By.CSS_SELECTOR, ".social > a:nth-child(4) img")
@@ -62,6 +59,7 @@ class MainPageLocators:
     PRIVACY_POLICY_LINK = (By.CSS_SELECTOR, "#footer-website :nth-child(2) :nth-child(2) div li:nth-child(2) a")
     PRODUCT_COLLECTIONS = (By.XPATH, "//p[@class='section-heading' and text()='Product Collections']")
     PRODUCT_COLLECTIONS_SECTION = (By.CSS_SELECTOR, "#footer-website > div > div:nth-child(1) > div:nth-child(1)")
+    RMETS_IMAGE = (By.CSS_SELECTOR, "#footer-website > div > div:nth-child(3) > div:nth-child(2) img")
     SINGLE_LINKS_SECTION = (By.CSS_SELECTOR, "#footer-website > div > div:nth-child(2) > div:nth-child(3)")
     SOCIAL_MEDIA_SECTION = (By.CSS_SELECTOR, "#footer-website > div > div:nth-child(4) > div:nth-child(2)")
     SUBSCRIBE_FOR_FREE_LINK = \
