@@ -32,10 +32,11 @@ class TestMainPage:
         page.check_element_is_present_in_the_dom_tree(footer_common_kit)
 
     @pytest.mark.parametrize('URL', URLs)
-    def test_tc_003_02_02_verify_display_of_product_collections_module_on_pages(self, driver,
-                                                                                open_and_load_main_page, URL):
+    def test_tc_003_02_02_verify_display_of_product_collections_module_on_pages(self, driver, open_and_load_main_page, URL):
         page = MainPage(driver, link=URL)
-        page.check_product_collections_section_is_visible()
+        product_collections_module = page.find_element(MainPageLocators.PRODUCT_COLLECTIONS_SECTION)
+        page.go_to_element(product_collections_module)
+        page.check_element_is_visible(product_collections_module)
 
     @pytest.mark.parametrize('URL', URLs)
     def test_tc_003_02_03_verify_display_of_subscription_section_on_pages(self, driver, open_and_load_main_page, URL):

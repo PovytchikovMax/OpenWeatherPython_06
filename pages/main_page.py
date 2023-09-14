@@ -50,10 +50,6 @@ class MainPage(BasePage):
         for line in lines:
             assert line.is_displayed()
 
-    def check_product_collections_section_is_visible(self):
-        product_collections_section = self.element_is_visible(self.locators.PRODUCT_COLLECTIONS_SECTION)
-        assert product_collections_section, "The Product Collections Section is not visible"
-
     def check_subscription_section_is_visible(self):
         subscription_section = self.element_is_visible(self.locators.SUBSCRIPTION_SECTION)
         assert subscription_section, "The Subscription Section is not visible"
@@ -310,15 +306,18 @@ class MainPage(BasePage):
     def check_element_is_present_in_the_dom_tree(self, element):
         assert element is not None, "The image is not present in the element"
 
+    def check_element_is_visible(self, element):
+        assert element.is_displayed(), "The element is invisible on the page"
+
     def check_image_is_present_in_the_element(self, element):
         assert element is not None, "The image is not present in the element"
 
     def check_element_image_is_visible(self, element):
-        assert element.is_displayed(), "The image is not visible in the element"
+        assert element.is_displayed(), "The image is invisible in the element"
 
     def check_image_is_correct_in_the_element(self, element, url):
         image_src = element.get_attribute("src")
-        assert image_src == url, "The image is not correct in the element"
+        assert image_src == url, "The image is incorrect in the element"
 
     def get_header_search_field_attribute(self, attribute):
         '''To retrieve the value of a specific attribute from Header Search field'''
