@@ -41,7 +41,9 @@ class TestMainPage:
     @pytest.mark.parametrize('URL', URLs)
     def test_tc_003_02_03_verify_display_of_subscription_section_on_pages(self, driver, open_and_load_main_page, URL):
         page = MainPage(driver, link=URL)
-        page.check_subscription_section_is_visible()
+        subscription_section = page.find_element(MainPageLocators.SUBSCRIPTION_SECTION)
+        page.go_to_element(subscription_section)
+        page.check_element_is_visible(subscription_section)
 
     @pytest.mark.parametrize('URL', URLs)
     def test_tc_003_02_04_verify_display_of_company_section_on_pages(self, driver, open_and_load_main_page, URL):

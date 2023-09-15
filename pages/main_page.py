@@ -50,10 +50,6 @@ class MainPage(BasePage):
         for line in lines:
             assert line.is_displayed()
 
-    def check_subscription_section_is_visible(self):
-        subscription_section = self.element_is_visible(self.locators.SUBSCRIPTION_SECTION)
-        assert subscription_section, "The Subscription Section is not visible"
-
     def check_company_section_is_visible(self):
         company_section = self.element_is_visible(self.locators.COMPANY_SECTION)
         assert company_section, "The Company Section is not visible"
