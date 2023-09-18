@@ -50,10 +50,6 @@ class MainPage(BasePage):
         for line in lines:
             assert line.is_displayed()
 
-    def check_company_section_is_visible(self):
-        company_section = self.element_is_visible(self.locators.COMPANY_SECTION)
-        assert company_section, "The Company Section is not visible"
-
     def check_technologies_section_is_visible(self):
         technologies_section = self.element_is_visible(self.locators.TECHNOLOGIES_SECTION)
         assert technologies_section, "The Technologies Section is not visible"
