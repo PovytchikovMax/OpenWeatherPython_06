@@ -373,6 +373,12 @@ class TestMainPage:
         rmets_image = page.find_element(MainPageLocators.RMETS_IMAGE)
         page.check_image_is_present_in_the_element(rmets_image)
 
+    def test_tc_003_10_36_verify_image_visibility_in_the_rmets_element(self, driver, open_and_load_main_page):
+        page = MainPage(driver)
+        rmets_image = page.find_element(MainPageLocators.RMETS_IMAGE)
+        page.go_to_element(rmets_image)
+        page.check_element_image_is_visible(rmets_image)
+
     def test_tc_003_12_01_check_historical_weather_data_link_functionality(self, driver, open_and_load_main_page):
         page = MainPage(driver)
         page.check_historical_weather_data_link_functionality()
