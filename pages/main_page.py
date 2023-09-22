@@ -50,10 +50,6 @@ class MainPage(BasePage):
         for line in lines:
             assert line.is_displayed()
 
-    def check_technologies_section_is_visible(self):
-        technologies_section = self.element_is_visible(self.locators.TECHNOLOGIES_SECTION)
-        assert technologies_section, "The Technologies Section is not visible"
-
     def check_terms_and_conditions_section_is_visible(self):
         terms_and_conditions_section = self.element_is_visible(self.locators.TERMS_AND_CONDITIONS_SECTION)
         assert terms_and_conditions_section, "The Terms & Conditions Section is not visible"
