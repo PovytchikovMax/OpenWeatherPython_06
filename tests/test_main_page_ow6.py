@@ -63,7 +63,9 @@ class TestMainPage:
     def test_tc_003_02_06_verify_display_of_terms_and_conditions_section_on_pages(self, driver, open_and_load_main_page,
                                                                                   URL):
         page = MainPage(driver, link=URL)
-        page.check_terms_and_conditions_section_is_visible()
+        terms_and_conditions_section = page.find_element(MainPageLocators.TERMS_AND_CONDITIONS_SECTION)
+        page.go_to_element(terms_and_conditions_section)
+        page.check_element_is_visible(terms_and_conditions_section)
 
     @pytest.mark.parametrize('URL', URLs)
     def test_tc_003_02_07_verify_display_of_single_links_section_on_pages(self, driver, open_and_load_main_page, URL):

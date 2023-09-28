@@ -50,10 +50,6 @@ class MainPage(BasePage):
         for line in lines:
             assert line.is_displayed()
 
-    def check_terms_and_conditions_section_is_visible(self):
-        terms_and_conditions_section = self.element_is_visible(self.locators.TERMS_AND_CONDITIONS_SECTION)
-        assert terms_and_conditions_section, "The Terms & Conditions Section is not visible"
-
     def check_single_links_section_is_visible(self):
         single_links_section = self.element_is_visible(self.locators.SINGLE_LINKS_SECTION)
         assert single_links_section, "The single links section is not visible"
