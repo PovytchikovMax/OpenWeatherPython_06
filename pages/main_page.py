@@ -50,10 +50,6 @@ class MainPage(BasePage):
         for line in lines:
             assert line.is_displayed()
 
-    def check_single_links_section_is_visible(self):
-        single_links_section = self.element_is_visible(self.locators.SINGLE_LINKS_SECTION)
-        assert single_links_section, "The single links section is not visible"
-
     def check_download_openweather_app_section_is_visible(self):
         download_openweather_app_section = self.element_is_visible(self.locators.DOWNLOAD_OPENWEATHER_APP_SECTION)
         assert download_openweather_app_section, "The Download OpenWeather app section is not visible"
