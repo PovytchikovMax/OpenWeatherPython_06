@@ -78,7 +78,9 @@ class TestMainPage:
     def test_tc_003_02_08_verify_display_of_download_openweather_app_section_on_pages \
                     (self, driver, open_and_load_main_page, URL):
         page = MainPage(driver, link=URL)
-        page.check_download_openweather_app_section_is_visible()
+        download_openweather_app_section = page.find_element(MainPageLocators.DOWNLOAD_OPENWEATHER_APP_SECTION)
+        page.go_to_element(download_openweather_app_section)
+        page.check_element_is_visible(download_openweather_app_section)
 
     @pytest.mark.parametrize('URL', URLs)
     def test_tc_003_02_09_verify_display_of_social_media_section_on_pages(self, driver, open_and_load_main_page, URL):
