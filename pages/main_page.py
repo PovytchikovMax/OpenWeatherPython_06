@@ -50,6 +50,7 @@ class MainPage(BasePage):
         for line in lines:
             assert line.is_displayed()
 
+
     def check_social_media_section_is_visible(self):
         social_media_section = self.element_is_visible(self.locators.SOCIAL_MEDIA_SECTION)
         assert social_media_section, "The Social Media section is not visible"
